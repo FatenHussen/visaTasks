@@ -43,4 +43,15 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Image:</strong>
-                    <input type
+                    <input type="file" name="image" class="form-control">
+                    @if ($post->image)
+                        <img src="{{ asset('storage/' . $post->image) }}" width="100px">
+                    @endif
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+              <button type="submit" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+    </form>
+@endsection
